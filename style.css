@@ -145,6 +145,22 @@ img {
 /* =========================================
    NAVEGACIÓN
 ========================================= */
+#modo-oscuro {
+    display: none;
+}
+
+.dark-toggle {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dark-toggle:hover {
+    color: var(--gold);
+    transform: rotate(20deg) scale(1.15);
+}
 
 .nav ul {
 
@@ -218,22 +234,14 @@ img {
 }
 
 
-.hero-video {
-
+.hero-image {
     position: absolute;
-
     top: 0;
-
     left: 0;
-
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
     z-index: 0;
-
 }
 
 
@@ -1375,7 +1383,20 @@ img {
 
     }
 
+/* =========================
+   MODO OSCURO
+========================= */
 
+#modo-oscuro:checked ~ * {
+    --dark: #f7f5f0;
+    --cream: #24231f;
+    --white: #302f2b;
+    --olive: #aeb99f;
+    --light-olive: #45483f;
+    --pink: #4a3e3d;
+    --gold: #cdb47d;
+    --grey: #c4c0b8;
+}
 
     /* FOOTER */
 
